@@ -1,0 +1,15 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.navegacion{
+    padding: 1em;
+    background-color: rgb(25, 25, 65);
+}
+
+.titleLogo{
+    font-size: 24px;
+}
