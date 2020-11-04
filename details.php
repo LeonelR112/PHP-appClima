@@ -14,12 +14,24 @@ if(!isset($_SESSION['country'])){
 
     $json = curl_exec($ch);
     $info = curl_getinfo($ch);
+    $infoUrlClima = json_decode($json);
+}
+else{
+    $ciudadId = $_SESSION['country'];
+    $setURL = "http://api.openweathermap.org/data/2.5/weather?id=" . $ciudadId ."&appid=" . APIKEY . "&units=metric";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $setURL);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $json = curl_exec($ch);
+    $info = curl_getinfo($ch);
+    $infoUrlClima = json_decode($json);
 }
 
 
 //var_dump($info);
-
-$infoUrlClima = json_decode($json);
 
 //var_dump($infoUrlClima);
 include "./templates/header.php"
@@ -34,7 +46,25 @@ include "./templates/header.php"
                 <h2><?=$infoUrlClima->name ?></h2>
                 <div class="row">
                 <div class="col-12 align-items-center">
-                    <img src="./img/icons/sunny.png" width="70px" alt="img">  
+                    <?php
+                            switch ($infoUrlClima->weather[0]->main) {
+                                case 'Clouds':
+                                    echo "<img src='./img/icons/cloudy.png' width='80px' alt=''>";
+                                    break;
+
+                                case 'Clear':
+                                    echo "<img src='./img/icons/sunny.png' width='80px' alt=''>";
+                                    break;
+                                
+                                case 'Rain':
+                                    echo "<img src='./img/icons/rain.png' width='80px' alt=''>";
+                                    break;
+
+                                default:
+                                    echo "<img src='./img/icons/sunny.png' width='80px' alt='imagen'>";
+                                    break;
+                            }
+                            ?>
                     <span class="h2"> <?=$infoUrlClima->main->temp ?> °C</span>
                 </div>
                 <div class="col-12 align-items-center"> 
@@ -42,6 +72,7 @@ include "./templates/header.php"
                 </div>
                     <div class="col-4 infoCiudad">
                         <ul>
+                            <li>hora actual: <?=$format ?> hs</li>
                             <li>min: <?=$infoUrlClima->main->temp_min ?> °C</li>
                             <li>max: <?=$infoUrlClima->main->temp_max ?> °C</li>
                             <li>presión: <?=$infoUrlClima->main->pressure ?> hPa</li>
@@ -60,39 +91,7 @@ include "./templates/header.php"
     </div>
     </main>
 
-    <!-- Modal -->
-    <div class="modal fade" id="countryChange" tabindex="-1" aria-labelledby="countryChange" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-dark" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="changeCountry.php" method="get">
-                    <select class="custom-select" size="5">
-                        <option selected>Seleccionar un país</option>
-                        <?php
-                            foreach($listCountries as $country){
-                        ?>
-                            <option value="<?=$country->id ?>"><?=$country->name ?></option>
-                        <?php
-                            }
-                        ?>
-                    </select>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Seleccionar</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
-                    </div>
-                    </form>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
 <?php
+    require_once "./layouts/modalCountryChange.php";
     include "./templates/footer.php";
 ?>

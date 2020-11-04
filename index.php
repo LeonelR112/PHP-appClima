@@ -15,12 +15,27 @@ if(!isset($_SESSION['country'])){
 
     $json = curl_exec($ch);
     $info = curl_getinfo($ch);
+    $infoUrlClima = json_decode($json);
+}
+else{
+    $ciudadId = $_SESSION['country'];
+    $setURL = "http://api.openweathermap.org/data/2.5/weather?id=" . $ciudadId ."&appid=" . APIKEY . "&units=metric";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $setURL);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+
+    $json = curl_exec($ch);
+    $info = curl_getinfo($ch);
+    $infoUrlClima = json_decode($json);
+    //var_dump($info);
 }
 
 
 //var_dump($info);
 
-$infoUrlClima = json_decode($json);
 
 //ar_dump($infoUrlClima);
 include "./templates/header.php";
@@ -33,7 +48,7 @@ include "./templates/header.php";
             <h1>Resumen</h1>
             <div class="row justify-content-center">
                 <div class="cartaClima col-12 col-lg-8">
-                    <h1 class="title border-bottom"><?= $infoUrlClima->name ?></h1>
+                    <h1 class="title border-bottom"><?= $infoUrlClima->name ?> | <?=$format ?>hs</h1>
                     <div class="row">
                         <div class="col-12 col-md-3">
                             Tiempo actual
@@ -73,42 +88,10 @@ include "./templates/header.php";
                 </div>
             </div>
         
-
         </div>
     </main>
 
-    <!-- Modal -->
-    <div class="modal fade" id="countryChange" tabindex="-1" aria-labelledby="countryChange" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="changeCountry.php" method="get">
-                    <select class="custom-select" size="5" name="countryID">
-                        <?php
-                            foreach($listCountries as $country){
-                        ?>
-                            <option value="<?=$country->id ?>"><?=$country->name ?></option>
-                        <?php
-                            }
-                        ?>
-                    </select>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Seleccionar</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
-                    </div>
-                    </form>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
 <?php
+require_once "./layouts/modalCountryChange.php";
 include "./templates/footer.php";
 ?>

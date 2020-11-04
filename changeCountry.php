@@ -1,5 +1,7 @@
 <?php
+    require "./config.php";
 
-    echo "cambio de pais";
+    $_SESSION['country'] = $_GET['countryID'];
+    header('location: http://localhost/PHP_Clima/home');
 
 ?>

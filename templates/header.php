@@ -16,7 +16,7 @@
     <script src="./js/main.js"></script>
 </head>
 
-<body class="bg-main">
+<body class="bg-dark">
 
     <nav class="navegacion text-white">
         <div class="row">
@@ -32,7 +32,7 @@
                         <a class="nav-link navWhite customLink" data-toggle="modal" data-target="#countryChange">SELECCIONAR CIUDAD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navWhite" href="#">BUSCAR</a>
+                        <a class="nav-link navWhite" href="#">INFO WEB</a>
                     </li>
                 </ul>
             </div>
