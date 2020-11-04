@@ -1,0 +1,83 @@
+[
+    {
+        "id": 3433955,
+        "name": "Ciudad Autónoma de Buenos Aires",
+        "state": "",
+        "country": "AR",
+        "coord": {
+            "lon": -58.450001,
+            "lat": -34.599998
+        }
+    },
+    {
+        "id": 3434132,
+        "name": "Escalada",
+        "state": "",
+        "country": "AR",
+        "coord": {
+            "lon": -59.11396,
+            "lat": -34.159199
+        }
+    },
+    {
+        "id": 5039192,
+        "name": "New York Mills",
+        "state": "MN",
+        "country": "US",
+        "coord": {
+            "lon": -95.376152,
+            "lat": 46.518021
+        }
+    },
+    {
+        "id": 2643741,
+        "name": "City of London",
+        "state": "",
+        "country": "GB",
+        "coord": {
+            "lon": -0.09184,
+            "lat": 51.512791
+        }
+    },
+    {
+        "id": 2643743,
+        "name": "London",
+        "state": "",
+        "country": "GB",
+        "coord": {
+            "lon": -0.12574,
+            "lat": 51.50853
+        }
+    },
+    {
+        "id": 3925227,
+        "name": "Brasiléia",
+        "state": "",
+        "country": "BR",
+        "coord": {
+            "lon": -68.748062,
+            "lat": -11.01611
+        }
+    },
+    {
+        "id": 3117735,
+        "name": "Madrid",
+        "state": "",
+        "country": "ES",
+        "coord": {
+            "lon": -3.70256,
+            "lat": 40.4165
+        }
+    },
+    {
+        "id": 360630,
+        "name": "Cairo",
+        "state": "",
+        "country": "EG",
+        "coord": {
+            "lon": 31.24967,
+            "lat": 30.06263
+        }
+    }
+
+]

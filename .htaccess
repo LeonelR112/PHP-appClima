@@ -1,0 +1,8 @@
+Options -MultiViews
+
+RewriteEngine On
+
+RewriteRule ^home$      index.php [END]
+
+RewriteRule ^details/([0-9]+)$  details.php?countryId=$1 [END]
+RewriteRule ^details$   details.php [END]
