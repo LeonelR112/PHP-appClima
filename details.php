@@ -71,10 +71,12 @@ include "./templates/header.php"
                     <small class="h5"> Sensación térmica: <?=$infoUrlClima->main->feels_like ?> °C</small>
                 </div>
                     <div class="col-4 infoCiudad">
-                        <ul>
-                            <li>hora actual: <?=$format ?> hs</li>
+                        <ul><!--Verificar esto del horario-->
+                            <li>hora actual: <?=date("H:i",$infoUrlClima->dt) ?> hs</li>
                             <li>min: <?=$infoUrlClima->main->temp_min ?> °C</li>
                             <li>max: <?=$infoUrlClima->main->temp_max ?> °C</li>
+                            <li>hora del amanecer:</li>
+                            <li>hora del atardecer:</li>
                             <li>presión: <?=$infoUrlClima->main->pressure ?> hPa</li>
                         </ul>
                     </div>
