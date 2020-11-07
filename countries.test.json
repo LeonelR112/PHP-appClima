@@ -78,6 +78,67 @@
             "lon": 31.24967,
             "lat": 30.06263
         }
+    },
+    {
+        "id": 524894,
+        "name": "Moscow",
+        "state": "",
+        "country": "RU",
+        "coord": {
+            "lon": 37.606667,
+            "lat": 55.761665
+        }
+    },
+    {
+        "id": 2950158,
+        "name": "Berlin",
+        "state": "",
+        "country": "DE",
+        "coord": {
+            "lon": 10.45,
+            "lat": 54.033329
+        }
+        
+    },
+    {
+        "id": 1698160,
+        "name": "Napoles",
+        "state": "",
+        "country": "PH",
+        "coord": {
+            "lon": 122.899719,
+            "lat": 10.50417
+        }
+    },
+    {
+        "id": 2968815,
+        "name": "Paris",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 2.3486,
+            "lat": 48.853401
+        }
+    },
+    {
+        "id": 2179537,
+        "name": "Wellington",
+        "state": "",
+        "country": "NZ",
+        "coord": {
+            "lon": 174.775574,
+            "lat": -41.28664
+        }
+    },
+    {
+        "id": 1850147,
+        "name": "Tokyo",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.691711,
+            "lat": 35.689499
+        }
     }
 
 ]
