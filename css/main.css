@@ -1,3 +1,9 @@
+/*---animaciones---*/
+
+
+
+/*-----------------*/
+
 body{
     margin: 0px;
     padding: 0px;
@@ -12,7 +18,10 @@ body{
 
 .navegacion{
     padding: 1em;
-    background-color: rgb(25, 25, 65);
+}
+
+.bg-pincipal{
+    background: linear-gradient(0deg, rgba(0,6,38,1) 0%, rgba(39,95,162,1) 100%);
 }
 
 .titleLogo{
@@ -32,8 +41,11 @@ body{
   background-color: rgb(20, 41, 58);
 }
 
+.bg-principal{
+    background: linear-gradient(0deg, rgba(0,6,38,1) 0%, rgba(39,95,162,1) 100%);
+}
+
 footer{
-    background-color: rgb(25, 25, 65);
     height: 2em;
     color: white;
     line-height: 2em;

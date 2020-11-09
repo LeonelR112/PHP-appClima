@@ -1,4 +1,4 @@
-<footer class="fixed-bottom">
+<footer class="bg-principal">
         Api-Clima con PHP - 2020
 </footer>
 

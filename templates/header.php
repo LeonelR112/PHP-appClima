@@ -16,9 +16,9 @@
     <script src="./js/main.js"></script>
 </head>
 
-<body class="bg-dark">
+<body class="bg-main">
 
-    <nav class="navegacion text-white">
+    <nav class="navegacion bg-pincipal">
         <div class="row">
             <div class="titleLogo col-12 text-center">
                 Api-Clima con PHP
