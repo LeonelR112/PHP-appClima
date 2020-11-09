@@ -16,8 +16,6 @@ if(!isset($_SESSION['country'])){
     $info = curl_getinfo($ch);
     $infoUrlClima = json_decode($json);
 
-    ini_set('date.timezone', 'America/Argentina/Buenos_Aires');
-    $format = $date->format("H:i");
 
 }
 else{
@@ -33,16 +31,13 @@ else{
     $info = curl_getinfo($ch);
     $infoUrlClima = json_decode($json);
 
-    $Time = new DateTime();
-    $Time->format('H:i');
-    $Time->setTimestamp($infoUrlClima->dt);
-
 }
 
 //var_dump($info);
 
 //var_dump($infoUrlClima);
-include "./templates/header.php"
+include "./templates/header.php";
+
 ?>
     
     <main class="p-2 mt-4 mb-4">
@@ -64,7 +59,7 @@ include "./templates/header.php"
                 </div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-4 infoCiudad">
                         <ul>
-                            <li>hora actual:<?=$Time->format("H:s") ?>  hs</li>
+                            <li>detalles: <?=$infoUrlClima->weather[0]->description?></li>
                             <li>min: <?=$infoUrlClima->main->temp_min ?> °C</li>
                             <li>max: <?=$infoUrlClima->main->temp_max ?> °C</li>
                             <li>presión: <?=$infoUrlClima->main->pressure ?> hPa</li>
@@ -72,7 +67,6 @@ include "./templates/header.php"
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-4 infoCiudad">
                         <ul>
-                            <li>detalles: <?=$infoUrlClima->weather[0]->description?></li>
                             <li>humedad: <?=$infoUrlClima->main->humidity ?>%</li>
                             <li>nubosidad: <?=$infoUrlClima->clouds->all ?> %</li>
                             <li>Viento: <img src="./img/wind.png" style="transform: rotate(<?=$infoUrlClima->wind->deg ?>deg);" width="40px" alt=""> <?=$infoUrlClima->wind->speed ?> km/h</li>

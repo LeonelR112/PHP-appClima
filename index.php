@@ -17,8 +17,6 @@ if(!isset($_SESSION['country'])){
     $info = curl_getinfo($ch);
     $infoUrlClima = json_decode($json);
 
-    ini_set('date.timezone', 'America/Argentina/Buenos_Aires');
-    $format = $date->format("H:i");
 }
 else{
     $ciudadId = $_SESSION['country'];
@@ -34,10 +32,6 @@ else{
     $info = curl_getinfo($ch);
     $infoUrlClima = json_decode($json);
 
-    $Time = new DateTime();
-    $Time->format('H:i');
-    $Time->setTimestamp($infoUrlClima->dt);
-    //var_dump($info);
 }
 
 
@@ -52,7 +46,7 @@ include "./templates/header.php";
         <div class="container-md mt-5">
             <h1>Resumen</h1>
             <hr style="border: 1px solid grey;">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mainCard">
                 <div class="cartaClima col-12 col-lg-8">
                     <h1 class="title border-bottom"><?= $infoUrlClima->name ?> - <?=$infoUrlClima->sys->country?> </h1>
                     <div class="row">
