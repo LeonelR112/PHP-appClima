@@ -41,7 +41,7 @@ include "./templates/header.php";
 ?>
     
     <main class="p-2 mt-4 mb-4">
-        <h1>Detalles</h1>
+        <h1>Details</h1>
         <hr style="border:1px solid grey"> 
     <div class="container-md mt-5">
         <div class="row">
@@ -55,21 +55,21 @@ include "./templates/header.php";
                     <span class="h2"> <?=$infoUrlClima->main->temp ?> °C</span>
                 </div>
                 <div class="col-12 align-items-center"> 
-                    <small class="h5"> Sensación térmica: <?=$infoUrlClima->main->feels_like ?> °C</small>
+                    <small class="h5"> Real feel: <?=$infoUrlClima->main->feels_like ?> °C</small>
                 </div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-4 infoCiudad">
                         <ul>
-                            <li>detalles: <?=$infoUrlClima->weather[0]->description?></li>
-                            <li>min: <?=$infoUrlClima->main->temp_min ?> °C</li>
-                            <li>max: <?=$infoUrlClima->main->temp_max ?> °C</li>
-                            <li>presión: <?=$infoUrlClima->main->pressure ?> hPa</li>
+                            <li>details: <?=$infoUrlClima->weather[0]->description?></li>
+                            <li>Min: <?=$infoUrlClima->main->temp_min ?> °C</li>
+                            <li>Max: <?=$infoUrlClima->main->temp_max ?> °C</li>
+                            <li>Pressure: <?=$infoUrlClima->main->pressure ?> hPa</li>
                         </ul>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-4 infoCiudad">
                         <ul>
-                            <li>humedad: <?=$infoUrlClima->main->humidity ?>%</li>
-                            <li>nubosidad: <?=$infoUrlClima->clouds->all ?> %</li>
-                            <li>Viento: <img src="./img/wind.png" style="transform: rotate(<?=$infoUrlClima->wind->deg ?>deg);" width="40px" alt=""> <?=$infoUrlClima->wind->speed ?> km/h</li>
+                            <li>Humidity: <?=$infoUrlClima->main->humidity ?>%</li>
+                            <li>Cloudiness: <?=$infoUrlClima->clouds->all ?> %</li>
+                            <li>Wind: <img src="./img/wind.png" style="transform: rotate(<?=$infoUrlClima->wind->deg ?>deg);" width="40px" alt=""> <?=$infoUrlClima->wind->speed ?> km/h</li>
                         </ul>
                     </div>
                 </div>
