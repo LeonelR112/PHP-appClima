@@ -1,43 +1,43 @@
 <?php
-    switch ($infoUrlClima->weather[0]->description) {
-        case 'cielo claro': //despejado
-            echo "<img src='./img/icons/sunny.png' width='150px' alt='nubes'>";
+    switch ($infoUrlClima->weather[0]->icon) {
+
+        case '01d':
+            $icon = "01n";
+            echo "<img src='http://openweathermap.org/img/wn/01d@2x.png' width='170px'>";
         break;
 
-        case 'muy nuboso' || 'nubes dispersas': //algunas nubes
-            echo "<img src='./img/icons/cloudy.png' width='150px' alt='nubes'>";
-        break;
-        
-        case 'algo de nubes': //nubes
-            echo "<img src='./img/icons/clouds.png' width='150px' alt='nubes'>";
+        case '02d':
+            $icon = "01n";
+            echo "<img src='http://openweathermap.org/img/wn/02d@2x.png' width='170px'>";
         break;
 
-        case 'nubes': //muy Nublado
-            echo "<img src='./img/icons/cloud.png' width='150px' alt='nubes'>";
+        case '03d':
+            $icon = "01n";
+            echo "<img src='http://openweathermap.org/img/wn/03d@2x.png' width='170px'>";
         break;
 
-        case 'lluvia moderada': //muy Nublado
-            echo "<img src='./img/icons/rain.png' width='150px' alt='nubes'>";
+        case '01n':
+            $icon = "01n";
+            echo "<img src='http://openweathermap.org/img/wn/01n@2x.png' width='170px'>";
         break;
 
-        case 'lluvia ligera': //muy Nublado
-            echo "<img src='./img/icons/some_rain.png' width='150px' alt='nubes'>";
+        case '02n':
+            $icon = "01n";
+            echo "<img src='http://openweathermap.org/img/wn/02n@2x.png' width='170px'>";
         break;
 
-        case '11d': //muy Nublado
-            echo "<img src='./img/icons/storm.png' width='150px' alt='nubes'>";
+        case '03n':
+            $icon = "01n";
+            echo "<img src='http://openweathermap.org/img/wn/03n@2x.png' width='170px'>";
         break;
 
-        case '13d': //muy Nublado
-            echo "<img src='./img/icons/snow.png' width='150px' alt='nubes'>";
-        break;
-
-        case 'niebla': //muy Nublado
-            echo "<img src='./img/icons/niebla.png' width='150px' alt='nubes'>";
+        case '04n':
+            $icon = "01n";
+            echo "<img src='http://openweathermap.org/img/wn/04n@2x.png' width='170px'>";
         break;
 
         default:
-            echo "icon not found!";
+            echo "icon not found";
             break;
     }
 ?>

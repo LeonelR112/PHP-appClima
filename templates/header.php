@@ -21,7 +21,7 @@
     <nav class="navegacion bg-pincipal">
         <div class="row">
             <div class="titleLogo col-12 text-center">
-                Api-Clima con PHP
+                Api-Weather with PHP
             </div>
             <div class="nav col-12 justify-content-center">
                 <ul class="nav nav-tabs">
@@ -29,10 +29,10 @@
                         <a class="nav-link navWhite" href="home">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navWhite customLink" data-toggle="modal" data-target="#countryChange">SELECCIONAR CIUDAD</a>
+                        <a class="nav-link navWhite customLink" data-toggle="modal" data-target="#countryChange">SELECT A CITY</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navWhite" href="#">INFO WEB</a>
+                        <a class="nav-link navWhite" href="#">ABOUT WEB</a>
                     </li>
                 </ul>
             </div>

@@ -3,7 +3,8 @@
 
     define("APIKEY", "8f4e7ff9ef011166fc00169aa113dd9c");
 
-    ini_set('date.timezone', 'America/Argentina/Buenos_Aires');
+    //ini_set('date.timezone', 'America/Argentina/Buenos_Aires');
+    //date_default_timezone_set('America/New_York')
     
 
 ?>

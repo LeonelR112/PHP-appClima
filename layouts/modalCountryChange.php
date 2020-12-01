@@ -1,7 +1,7 @@
     <!-- Modal -->
     <div class="modal fade" id="countryChange" tabindex="-1" aria-labelledby="countryChange" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-light">
                 <div class="modal-header">
                     <h5 class="modal-title text-dark" id="exampleModalLabel">Selecciones una ciudad</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">

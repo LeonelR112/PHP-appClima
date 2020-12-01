@@ -11,12 +11,20 @@
 
 /*-----------------*/
 
+html{
+    height: 100%;
+}
+
 body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:white;
+}
+
+main{
+    height: calc(100% - 2em);
 }
 
 .customLink{

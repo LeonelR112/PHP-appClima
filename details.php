@@ -4,7 +4,7 @@ require_once "config.php";
 $listCountries = json_decode(file_get_contents('countries.test.json'));
 
 
-$urlBase1 = "http://api.openweathermap.org/data/2.5/weather?id=3433955&appid=" . APIKEY . "&units=metric&lang=sp";
+$urlBase1 = "http://api.openweathermap.org/data/2.5/weather?id=3433955&appid=" . APIKEY . "&units=metric";
 
 if(!isset($_SESSION['country'])){
     $ch = curl_init();
@@ -20,7 +20,7 @@ if(!isset($_SESSION['country'])){
 }
 else{
     $ciudadId = $_SESSION['country'];
-    $setURL = "http://api.openweathermap.org/data/2.5/weather?id=" . $ciudadId ."&appid=" . APIKEY . "&units=metric&lang=sp";
+    $setURL = "http://api.openweathermap.org/data/2.5/weather?id=" . $ciudadId ."&appid=" . APIKEY . "&units=metric";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $setURL);
