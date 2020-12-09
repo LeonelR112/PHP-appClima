@@ -1,1 +1,3 @@
 city.list.json
+/vendor/
+.env

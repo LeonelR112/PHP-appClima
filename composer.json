@@ -1,0 +1,12 @@
+{
+    "name": "leonel/php_clima_con_env",
+    "authors": [
+        {
+            "name": "Leonel",
+            "email": "Leonel.Ruiz112@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.2"
+    }
+}
